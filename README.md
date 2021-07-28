@@ -50,21 +50,20 @@ Here is a list of the validators currently available.
 
 ### isEmail
 
-**isEmail(str [, options])**: Check if the input string is an email.
-
-`options` is an object which defaults to —
-
-```
-{
-    allow_display_name: false,
-    require_display_name: false,
-    allow_utf8_local_part: true,
-    require_tld: true,
-    allow_ip_domain: false,
-    domain_specific_validation: false,
-    blacklisted_chars: ''
-}
-```
+- Syntax: **isEmail(str [, options])**
+- Definition: Check if the input string is an email.
+- `options` is an object which defaults to —
+    ```
+    {
+        allow_display_name: false,
+        require_display_name: false,
+        allow_utf8_local_part: true,
+        require_tld: true,
+        allow_ip_domain: false,
+        domain_specific_validation: false,
+        blacklisted_chars: ''
+    }
+    ```
 - If `allow_display_name` is set to true, the validator will also match `Display Name <email-address>`.
 - If `require_display_name` is set to true, the validator will reject strings without the format `Display Name <email-address>`.
 - If `allow_utf8_local_part` is set to false, the validator will not allow any non-English UTF8 character in email address' local part.
