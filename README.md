@@ -130,27 +130,39 @@ Here is a list of the validators currently available.
 
 ### isBoolean
 
-- **Syntax**: isBoolean(str [, options])`
+- **Syntax**: `isBoolean(str [, options])`
 - **Definition**: Check if the input string is a boolean.
-- **options** is an object which defaults to `{ loose: false }`.
-    - If loose is is set to `false`, the validator will strictly match `['true', 'false', '0', '1']`.
-    - If loose is set to `true`, the validator will also match `'yes', 'no'`, and will match a valid boolean string of any case. (eg: `['true', 'True', 'TRUE']`).
+- **options** is an object which defaults to `{ "loose": false }`.
+    - If loose is is set to `false`, the validator will strictly match `["true", "false", "0", "1"]`.
+    - If loose is set to `true`, the validator will also match `"yes", "no"`, and will match a valid boolean string of any case. (eg: `["true", "True", "TRUE"]`).
 
 ### isFloat
 
-**isFloat(str [, options])** | Check if the input string is a float.<br/><br/>`options` is an object which can contain the keys `min`, `max`, `gt`, and/or `lt` to validate the float is within boundaries (e.g. `{ min: 7.22, max: 9.55 }`) it also has `locale` as an option.<br/><br/>`min` and `max` are equivalent to 'greater or equal' and 'less or equal', respectively while `gt` and `lt` are their strict counterparts.<br/><br/>`locale` determine the decimal separator and is one of `['ar', 'ar-AE', 'ar-BH', 'ar-DZ', 'ar-EG', 'ar-IQ', 'ar-JO', 'ar-KW', 'ar-LB', 'ar-LY', 'ar-MA', 'ar-QA', 'ar-QM', 'ar-SA', 'ar-SD', 'ar-SY', 'ar-TN', 'ar-YE', 'bg-BG', 'cs-CZ', 'da-DK', 'de-DE', 'en-AU', 'en-GB', 'en-HK', 'en-IN', 'en-NZ', 'en-US', 'en-ZA', 'en-ZM', 'es-ES', 'fr-CA', 'fr-FR', 'hu-HU', 'it-IT', 'nb-NO', 'nl-NL', 'nn-NO', 'pl-PL', 'pt-BR', 'pt-PT', 'ru-RU', 'sl-SI', 'sr-RS', 'sr-RS@latin', 'sv-SE', 'tr-TR', 'uk-UA']`.
+- **Syntax**: `isFloat(str [, options])`
+- **Definition**: Check if the input string is a float.
+- **options** is an object which can contain the keys `min`, `max`, `gt`, and/or `lt` to validate the float is within boundaries (e.g. `{ min: 7.22, max: 9.55 }`) it also has `locale` as an option.
+    - `min` and `max` are equivalent to 'greater or equal' and 'less or equal', respectively while `gt` and `lt` are their strict counterparts.
+    - `locale` determine the decimal separator and is one of `['ar', 'ar-AE', 'ar-BH', 'ar-DZ', 'ar-EG', 'ar-IQ', 'ar-JO', 'ar-KW', 'ar-LB', 'ar-LY', 'ar-MA', 'ar-QA', 'ar-QM', 'ar-SA', 'ar-SD', 'ar-SY', 'ar-TN', 'ar-YE', 'bg-BG', 'cs-CZ', 'da-DK', 'de-DE', 'en-AU', 'en-GB', 'en-HK', 'en-IN', 'en-NZ', 'en-US', 'en-ZA', 'en-ZM', 'es-ES', 'fr-CA', 'fr-FR', 'hu-HU', 'it-IT', 'nb-NO', 'nl-NL', 'nn-NO', 'pl-PL', 'pt-BR', 'pt-PT', 'ru-RU', 'sl-SI', 'sr-RS', 'sr-RS@latin', 'sv-SE', 'tr-TR', 'uk-UA']`.
 
 ### isDivisibleBy
 
-**isDivisibleBy(str, number)** | Check if the input string is a number that's divisible by another.
+- **Syntax**: `isDivisibleBy(str, number)`
+- **Definition**: Check if the input string is a number that's divisible by another.
 
 ### isJSON
 
-**isJSON(str [, options])** | Check if the input string is valid JSON (note: uses JSON.parse).<br/><br/>`options` is an object which defaults to `{ allow_primitives: false }`. If `allow_primitives` is true, the primitives 'true', 'false' and 'null' are accepted as valid JSON values.
+- **Syntax**: `isJSON(str [, options])`
+- **Definition**: Check if the input string is valid JSON (note: uses JSON.parse).
+- **options** is an object which defaults to `{ "allow_primitives": false }`.
+    - If `allow_primitives` is `true`, the primitives 'true', 'false' and 'null' are accepted as valid JSON values.
 
 ### isNumeric
 
-**isNumeric(str [, options])** | Check if the input string contains only numbers.<br/><br/>`options` is an object which defaults to `{no_symbols: false}` it also has locale as an option. If `no_symbols` is true, the validator will reject numeric strings that feature a symbol (e.g. `+`, `-`, or `.`).<br/><br/>`locale` determine the decimal separator and is one of `['ar', 'ar-AE', 'ar-BH', 'ar-DZ', 'ar-EG', 'ar-IQ', 'ar-JO', 'ar-KW', 'ar-LB', 'ar-LY', 'ar-MA', 'ar-QA', 'ar-QM', 'ar-SA', 'ar-SD', 'ar-SY', 'ar-TN', 'ar-YE', 'bg-BG', 'cs-CZ', 'da-DK', 'de-DE', 'en-AU', 'en-GB', 'en-HK', 'en-IN', 'en-NZ', 'en-US', 'en-ZA', 'en-ZM', 'es-ES', 'fr-FR', 'fr-CA', 'hu-HU', 'it-IT', 'nb-NO', 'nl-NL', 'nn-NO', 'pl-PL', 'pt-BR', 'pt-PT', 'ru-RU', 'sl-SI', 'sr-RS', 'sr-RS@latin', 'sv-SE', 'tr-TR', 'uk-UA']`.
+- **Syntax**: `isNumeric(str [, options])`
+- **Definition**: Check if the input string contains only numbers.
+- **options** is an object which defaults to `{ "no_symbols": false }` it also has locale as an option.
+    - If `no_symbols` is true, the validator will reject numeric strings that feature a symbol (e.g. `+`, `-`, or `.`).
+    - `locale` determine the decimal separator and is one of `['ar', 'ar-AE', 'ar-BH', 'ar-DZ', 'ar-EG', 'ar-IQ', 'ar-JO', 'ar-KW', 'ar-LB', 'ar-LY', 'ar-MA', 'ar-QA', 'ar-QM', 'ar-SA', 'ar-SD', 'ar-SY', 'ar-TN', 'ar-YE', 'bg-BG', 'cs-CZ', 'da-DK', 'de-DE', 'en-AU', 'en-GB', 'en-HK', 'en-IN', 'en-NZ', 'en-US', 'en-ZA', 'en-ZM', 'es-ES', 'fr-FR', 'fr-CA', 'hu-HU', 'it-IT', 'nb-NO', 'nl-NL', 'nn-NO', 'pl-PL', 'pt-BR', 'pt-PT', 'ru-RU', 'sl-SI', 'sr-RS', 'sr-RS@latin', 'sv-SE', 'tr-TR', 'uk-UA']`.
 
 ## MIT License
 
