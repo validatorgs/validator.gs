@@ -75,9 +75,33 @@ Here is a list of the validators currently available.
 
 ### isURL
 
-**isURL(str [, options])**: Check if the input string is a valid URL.
-
-`options` is an object which defaults to `{ protocols: ['http','https','ftp'], require_tld: true, require_protocol: false, require_host: true, require_port: false, require_valid_protocol: true, allow_underscores: false, host_whitelist: false, host_blacklist: false, allow_trailing_dot: false, allow_protocol_relative_urls: false, disallow_auth: false, validate_length: true }`.<br/><br/>require_protocol - if set as true isURL will return false if protocol is not present in the URL.<br/>require_valid_protocol - isURL will check if the URL's protocol is present in the protocols option.<br/>protocols - valid protocols can be modified with this option.<br/>require_host - if set as false isURL will not check if host is present in the URL.<br/>require_port - if set as true isURL will check if port is present in the URL.<br/>allow_protocol_relative_urls - if set as true protocol relative URLs will be allowed.<br/>validate_length - if set as false isURL will skip string length validation (2083 characters is IE max URL length).
+- **Syntax**: `isURL(str [, options])`
+- **Definition**: Check if the input string is a valid URL.
+- **options** is an object which defaults to —
+```json
+{
+    "protocols": ["http","https","ftp"],
+    "require_tld": true,
+    "require_protocol": false,
+    "require_host": true,
+    "require_port": false,
+    "require_valid_protocol": true,
+    "allow_underscores": false,
+    "host_whitelist": false,
+    "host_blacklist": false,
+    "allow_trailing_dot": false,
+    "allow_protocol_relative_urls": false,
+    "disallow_auth": false,
+    "validate_length": true
+}
+```
+- `protocols` - valid protocols can be modified with this option.
+- `require_protocol` - if set as true isURL will return false if protocol is not present in the URL.
+- `require_host` - if set as false isURL will not check if host is present in the URL.
+- `require_port` - if set as true isURL will check if port is present in the URL.
+- `require_valid_protocol` - isURL will check if the URL's protocol is present in the protocols option.
+- `allow_protocol_relative_urls` - if set as true protocol relative URLs will be allowed.
+- `validate_length` - if set as false isURL will skip string length validation (2083 characters is IE max URL length).
 
 | **isEmpty(str [, options])** | Check if the input string has a length of zero.<br/><br/>`options` is an object which defaults to `{ ignore_whitespace:false }`. |
 
