@@ -53,7 +53,7 @@ Here is a list of the validators currently available.
 - **Syntax**: `isEmail(str [, options])`
 - **Definition**: Check if the input string is an email.
 - **options** is an object which defaults to —
-    ```
+    ```json
     {
         allow_display_name: false,
         require_display_name: false,
