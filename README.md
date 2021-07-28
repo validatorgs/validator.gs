@@ -15,7 +15,7 @@ A library of string validation for Google Apps Script.
 
 This library is already published as an Apps Script, making it easy to include in your project. To add it to your script, do the following in the Apps Script code on the **New** editor:
 
-1. Click on the + icon next to **Libraries** on the side-bar
+1. Click on the ➕ icon next to **Libraries** on the side-bar
 2. Enter the script ID `1OLVhM4V7DKQaPLM0025IO_Url3xr8QnnLqTlC7viE9AtEIIG_-IPVDY0` and click the "Look up" button.
 3. Choose a version in the dropdown box (usually best to pick the latest version).
 4. Click the "Add" button.
