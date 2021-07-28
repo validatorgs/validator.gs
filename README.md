@@ -78,23 +78,23 @@ Here is a list of the validators currently available.
 - **Syntax**: `isURL(str [, options])`
 - **Definition**: Check if the input string is a valid URL.
 - **options** is an object which defaults to —
-```json
-{
-    "protocols": ["http","https","ftp"],
-    "require_tld": true,
-    "require_protocol": false,
-    "require_host": true,
-    "require_port": false,
-    "require_valid_protocol": true,
-    "allow_underscores": false,
-    "host_whitelist": false,
-    "host_blacklist": false,
-    "allow_trailing_dot": false,
-    "allow_protocol_relative_urls": false,
-    "disallow_auth": false,
-    "validate_length": true
-}
-```
+    ```json
+    {
+        "protocols": ["http","https","ftp"],
+        "require_tld": true,
+        "require_protocol": false,
+        "require_host": true,
+        "require_port": false,
+        "require_valid_protocol": true,
+        "allow_underscores": false,
+        "host_whitelist": false,
+        "host_blacklist": false,
+        "allow_trailing_dot": false,
+        "allow_protocol_relative_urls": false,
+        "disallow_auth": false,
+        "validate_length": true
+    }
+    ```
     - `protocols` - valid protocols can be modified with this option.
     - `require_protocol` - if set as true isURL will return false if protocol is not present in the URL.
     - `require_host` - if set as false isURL will not check if host is present in the URL.
