@@ -36,20 +36,66 @@ Alternatively, you can copy and paste the files in the [`/src`](src) directory d
 
 Here is a list of the validators currently available.
 
-| Validator | Description |
-| --- | --- |
-| **isEmail(str [, options])** | Check if the input string is an email.<br/><br/>`options` is an object which defaults to `{ allow_display_name: false, require_display_name: false, allow_utf8_local_part: true, require_tld: true, allow_ip_domain: false, domain_specific_validation: false, blacklisted_chars: '' }`. If `allow_display_name` is set to true, the validator will also match `Display Name <email-address>`. If `require_display_name` is set to true, the validator will reject strings without the format `Display Name <email-address>`. If `allow_utf8_local_part` is set to false, the validator will not allow any non-English UTF8 character in email address' local part. If `require_tld` is set to false, e-mail addresses without having TLD in their domain will also be matched. If `ignore_max_length` is set to true, the validator will not check for the standard max length of an email. If `allow_ip_domain` is set to true, the validator will allow IP addresses in the host part. If `domain_specific_validation` is true, some additional validation will be enabled, e.g. disallowing certain syntactically valid email addresses that are rejected by GMail. If `blacklisted_chars` receives a string, then the validator will reject emails that include any of the characters in the string, in the name part. |
-| **isURL(str [, options])** | Check if the input string is a valid URL.<br/><br/>`options` is an object which defaults to `{ protocols: ['http','https','ftp'], require_tld: true, require_protocol: false, require_host: true, require_port: false, require_valid_protocol: true, allow_underscores: false, host_whitelist: false, host_blacklist: false, allow_trailing_dot: false, allow_protocol_relative_urls: false, disallow_auth: false, validate_length: true }`.<br/><br/>require_protocol - if set as true isURL will return false if protocol is not present in the URL.<br/>require_valid_protocol - isURL will check if the URL's protocol is present in the protocols option.<br/>protocols - valid protocols can be modified with this option.<br/>require_host - if set as false isURL will not check if host is present in the URL.<br/>require_port - if set as true isURL will check if port is present in the URL.<br/>allow_protocol_relative_urls - if set as true protocol relative URLs will be allowed.<br/>validate_length - if set as false isURL will skip string length validation (2083 characters is IE max URL length). |
+1. [isEmail](#isEmail)
+2. [isURL](#isURL)
+3. [isEmpty](#isEmpty)
+4. [isDate](#isDate)
+5. [isAfter](#isAfter)
+6. [isBefore](#isBefore)
+7. [isBoolean](#isBoolean)
+8. [isFloat](#isFloat)
+9. [isDivisibleBy](#isDivisibleBy)
+10. [isJSON](#isJSON)
+11. [isNumeric](#isNumeric)
+
+### isEmail
+
+**isEmail(str [, options])**: Check if the input string is an email.
+
+`options` is an object which defaults to —
+
+```
+{
+    allow_display_name: false,
+    require_display_name: false,
+    allow_utf8_local_part: true,
+    require_tld: true,
+    allow_ip_domain: false,
+    domain_specific_validation: false,
+    blacklisted_chars: ''
+}
+```
+- If `allow_display_name` is set to true, the validator will also match `Display Name <email-address>`.
+- If `require_display_name` is set to true, the validator will reject strings without the format `Display Name <email-address>`.
+- If `allow_utf8_local_part` is set to false, the validator will not allow any non-English UTF8 character in email address' local part.
+- If `require_tld` is set to false, e-mail addresses without having TLD in their domain will also be matched.
+- If `ignore_max_length` is set to true, the validator will not check for the standard max length of an email.
+- If `allow_ip_domain` is set to true, the validator will allow IP addresses in the host part.
+- If `domain_specific_validation` is true, some additional validation will be enabled, e.g. disallowing certain syntactically valid email addresses that are rejected by GMail.
+- If `blacklisted_chars` receives a string, then the validator will reject emails that include any of the characters in the string, in the name part.
+
+### isURL
+
+**isURL(str [, options])**: Check if the input string is a valid URL.
+
+`options` is an object which defaults to `{ protocols: ['http','https','ftp'], require_tld: true, require_protocol: false, require_host: true, require_port: false, require_valid_protocol: true, allow_underscores: false, host_whitelist: false, host_blacklist: false, allow_trailing_dot: false, allow_protocol_relative_urls: false, disallow_auth: false, validate_length: true }`.<br/><br/>require_protocol - if set as true isURL will return false if protocol is not present in the URL.<br/>require_valid_protocol - isURL will check if the URL's protocol is present in the protocols option.<br/>protocols - valid protocols can be modified with this option.<br/>require_host - if set as false isURL will not check if host is present in the URL.<br/>require_port - if set as true isURL will check if port is present in the URL.<br/>allow_protocol_relative_urls - if set as true protocol relative URLs will be allowed.<br/>validate_length - if set as false isURL will skip string length validation (2083 characters is IE max URL length).
+
 | **isEmpty(str [, options])** | Check if the input string has a length of zero.<br/><br/>`options` is an object which defaults to `{ ignore_whitespace:false }`. |
+
 | **isDate(input [, options])** | Check if the input string is a valid date. e.g. [`2002-07-15`, new Date()].<br/><br/> `options` is an object which can contain the keys `format`, `strictMode` and/or `delimiters`<br/><br/>`format` is a string and defaults to `YYYY/MM/DD`.<br/><br/>`strictMode` is a boolean and defaults to `false`. If `strictMode` is set to true, the validator will reject inputs different from `format`.<br/><br/> `delimiters` is an array of allowed date delimiters and defaults to `['/', '-']`. |
+
 | **isAfter(str [, date])** | Check if the input string is a date that's after the specified date (defaults to now). |
+
 | **isBefore(str [, date])** | Check if the input string is a date that's before the specified date. |
+
 | **isBoolean(str [, options])** | Check if the input string is a boolean.<br/><br/>`options` is an object which defaults to `{ loose: false }`. If loose is is set to false, the validator will strictly match ['true', 'false', '0', '1']. If loose is set to true, the validator will also match 'yes', 'no', and will match a valid boolean string of any case. (eg: ['true', 'True', 'TRUE']). |
+
 | **isFloat(str [, options])** | Check if the input string is a float.<br/><br/>`options` is an object which can contain the keys `min`, `max`, `gt`, and/or `lt` to validate the float is within boundaries (e.g. `{ min: 7.22, max: 9.55 }`) it also has `locale` as an option.<br/><br/>`min` and `max` are equivalent to 'greater or equal' and 'less or equal', respectively while `gt` and `lt` are their strict counterparts.<br/><br/>`locale` determine the decimal separator and is one of `['ar', 'ar-AE', 'ar-BH', 'ar-DZ', 'ar-EG', 'ar-IQ', 'ar-JO', 'ar-KW', 'ar-LB', 'ar-LY', 'ar-MA', 'ar-QA', 'ar-QM', 'ar-SA', 'ar-SD', 'ar-SY', 'ar-TN', 'ar-YE', 'bg-BG', 'cs-CZ', 'da-DK', 'de-DE', 'en-AU', 'en-GB', 'en-HK', 'en-IN', 'en-NZ', 'en-US', 'en-ZA', 'en-ZM', 'es-ES', 'fr-CA', 'fr-FR', 'hu-HU', 'it-IT', 'nb-NO', 'nl-NL', 'nn-NO', 'pl-PL', 'pt-BR', 'pt-PT', 'ru-RU', 'sl-SI', 'sr-RS', 'sr-RS@latin', 'sv-SE', 'tr-TR', 'uk-UA']`. |
+
 | **isDivisibleBy(str, number)** | Check if the input string is a number that's divisible by another. |
+
 | **isJSON(str [, options])** | Check if the input string is valid JSON (note: uses JSON.parse).<br/><br/>`options` is an object which defaults to `{ allow_primitives: false }`. If `allow_primitives` is true, the primitives 'true', 'false' and 'null' are accepted as valid JSON values. |
 | **isNumeric(str [, options])** | Check if the input string contains only numbers.<br/><br/>`options` is an object which defaults to `{no_symbols: false}` it also has locale as an option. If `no_symbols` is true, the validator will reject numeric strings that feature a symbol (e.g. `+`, `-`, or `.`).<br/><br/>`locale` determine the decimal separator and is one of `['ar', 'ar-AE', 'ar-BH', 'ar-DZ', 'ar-EG', 'ar-IQ', 'ar-JO', 'ar-KW', 'ar-LB', 'ar-LY', 'ar-MA', 'ar-QA', 'ar-QM', 'ar-SA', 'ar-SD', 'ar-SY', 'ar-TN', 'ar-YE', 'bg-BG', 'cs-CZ', 'da-DK', 'de-DE', 'en-AU', 'en-GB', 'en-HK', 'en-IN', 'en-NZ', 'en-US', 'en-ZA', 'en-ZM', 'es-ES', 'fr-FR', 'fr-CA', 'hu-HU', 'it-IT', 'nb-NO', 'nl-NL', 'nn-NO', 'pl-PL', 'pt-BR', 'pt-PT', 'ru-RU', 'sl-SI', 'sr-RS', 'sr-RS@latin', 'sv-SE', 'tr-TR', 'uk-UA']`. |
-
 
 ## MIT License
 
