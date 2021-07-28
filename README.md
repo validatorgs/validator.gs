@@ -1,4 +1,4 @@
-> Disclaimer: This work has been **FULLY** derived from the [validator.js](https://github.com/validatorjs/validator.js) project.
+> Disclaimer: This work has been derived from the [validator.js](https://github.com/validatorjs/validator.js) project.
 
 # validator.gs
 
