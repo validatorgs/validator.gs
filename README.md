@@ -8,7 +8,7 @@ A library of string validation for Google Apps Script.
 
 **This library validates strings only.**
 
-- If you're not sure if your input is a string, coerce it using `input + ''`.
+- If you're not sure if your input is a string, coerce it using `input + ''`
 - Passing anything other than a string will result in an error.
 
 ## Installation and Usage
