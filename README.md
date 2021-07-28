@@ -55,13 +55,13 @@ Here is a list of the validators currently available.
 - **options** is an object which defaults to —
     ```json
     {
-        allow_display_name: false,
-        require_display_name: false,
-        allow_utf8_local_part: true,
-        require_tld: true,
-        allow_ip_domain: false,
-        domain_specific_validation: false,
-        blacklisted_chars: ''
+        "allow_display_name": false,
+        "require_display_name": false,
+        "allow_utf8_local_part": true,
+        "require_tld": true,
+        "allow_ip_domain": false,
+        "domain_specific_validation": false,
+        "blacklisted_chars": ""
     }
     ```
     - If `allow_display_name` is set to true, the validator will also match `Display Name <email-address>`.
