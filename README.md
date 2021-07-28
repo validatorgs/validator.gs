@@ -50,9 +50,9 @@ Here is a list of the validators currently available.
 
 ### isEmail
 
-- Syntax: **isEmail(str [, options])**
-- Definition: Check if the input string is an email.
-- `options` is an object which defaults to —
+- **Syntax**: `isEmail(str [, options])`
+- **Definition**: Check if the input string is an email.
+- **options** is an object which defaults to —
     ```
     {
         allow_display_name: false,
@@ -64,14 +64,14 @@ Here is a list of the validators currently available.
         blacklisted_chars: ''
     }
     ```
-- If `allow_display_name` is set to true, the validator will also match `Display Name <email-address>`.
-- If `require_display_name` is set to true, the validator will reject strings without the format `Display Name <email-address>`.
-- If `allow_utf8_local_part` is set to false, the validator will not allow any non-English UTF8 character in email address' local part.
-- If `require_tld` is set to false, e-mail addresses without having TLD in their domain will also be matched.
-- If `ignore_max_length` is set to true, the validator will not check for the standard max length of an email.
-- If `allow_ip_domain` is set to true, the validator will allow IP addresses in the host part.
-- If `domain_specific_validation` is true, some additional validation will be enabled, e.g. disallowing certain syntactically valid email addresses that are rejected by GMail.
-- If `blacklisted_chars` receives a string, then the validator will reject emails that include any of the characters in the string, in the name part.
+    - If `allow_display_name` is set to true, the validator will also match `Display Name <email-address>`.
+    - If `require_display_name` is set to true, the validator will reject strings without the format `Display Name <email-address>`.
+    - If `allow_utf8_local_part` is set to false, the validator will not allow any non-English UTF8 character in email address' local part.
+    - If `require_tld` is set to false, e-mail addresses without having TLD in their domain will also be matched.
+    - If `ignore_max_length` is set to true, the validator will not check for the standard max length of an email.
+    - If `allow_ip_domain` is set to true, the validator will allow IP addresses in the host part.
+    - If `domain_specific_validation` is true, some additional validation will be enabled, e.g. disallowing certain syntactically valid email addresses that are rejected by GMail.
+    - If `blacklisted_chars` receives a string, then the validator will reject emails that include any of the characters in the string, in the name part.
 
 ### isURL
 
