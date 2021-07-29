@@ -39,6 +39,8 @@ This library is already published as an Apps Script, making it easy to include i
 
 Alternatively, you can copy and paste the files in the [`/src`](src) directory directly into your script project.
 
+https://user-images.githubusercontent.com/37455462/127444395-782f008b-5851-4051-90b4-951a8fae4e80.mp4
+
 ## Validators
 
 Here is a list of the validators currently available.
