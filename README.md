@@ -13,12 +13,13 @@ A library of string validation for Google Apps Script.
 
 # Table of contents
 
-- [Installation and Usage](#installation-and-usage)
+- [Installation](#installation)
+    - [Usage](#usage)
 - [Validators](#validators)
 - [Contributing](#contributing)
 - [License](#license-mit)
 
-## Installation and Usage
+## Installation
 
 This library is already published as an Apps Script, making it easy to include in your project. To add it to your script, do the following in the Apps Script code on the **New** editor:
 
@@ -38,6 +39,8 @@ This library is already published as an Apps Script, making it easy to include i
 </details>
 
 Alternatively, you can copy and paste the files in the [`/src`](src) directory directly into your script project.
+
+### Usage
 
 https://user-images.githubusercontent.com/37455462/127444395-782f008b-5851-4051-90b4-951a8fae4e80.mp4
 
