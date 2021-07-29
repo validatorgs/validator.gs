@@ -85,6 +85,8 @@ Here is a list of the validators currently available.
     - If `domain_specific_validation` is true, some additional validation will be enabled, e.g. disallowing certain syntactically valid email addresses that are rejected by GMail.
     - If `blacklisted_chars` receives a string, then the validator will reject emails that include any of the characters in the string, in the name part.
 
+[🔝](#table-of-contents)
+
 ### isURL
 
 - **Syntax**: `isURL(str [, options])`
@@ -115,6 +117,8 @@ Here is a list of the validators currently available.
     - `allow_protocol_relative_urls` - if set as true protocol relative URLs will be allowed.
     - `validate_length` - if set as false isURL will skip string length validation (2083 characters is IE max URL length).
 
+[🔝](#table-of-contents)
+
 ### isEmpty
 
 - **Syntax**: `isEmpty(str [, options])`
@@ -129,6 +133,8 @@ Here is a list of the validators currently available.
     - `format` is a string and defaults to `YYYY/MM/DD`.
     - `strictMode` is a boolean and defaults to `false`. If `strictMode` is set to true, the validator will reject inputs different from `format`.
     - `delimiters` is an array of allowed date delimiters and defaults to `['/', '-']`.
+
+[🔝](#table-of-contents)
 
 ### isAfter
 
@@ -147,6 +153,8 @@ Here is a list of the validators currently available.
 - **options** is an object which defaults to `{ "loose": false }`.
     - If loose is is set to `false`, the validator will strictly match `["true", "false", "0", "1"]`.
     - If loose is set to `true`, the validator will also match `"yes", "no"`, and will match a valid boolean string of any case. (eg: `["true", "True", "TRUE"]`).
+
+[🔝](#table-of-contents)
 
 ### isFloat
 
@@ -167,6 +175,8 @@ Here is a list of the validators currently available.
 - **Definition**: Check if the input string is valid JSON (note: uses JSON.parse).
 - **options** is an object which defaults to `{ "allow_primitives": false }`.
     - If `allow_primitives` is `true`, the primitives 'true', 'false' and 'null' are accepted as valid JSON values.
+
+[🔝](#table-of-contents)
 
 ### isNumeric
 
@@ -189,6 +199,8 @@ In general, we'll follow the "fork-and-pull" Git workflow:
 5. **Make sure** you merge the latest from "upstream" and resolve conflicts if there is any
 6. Push your work back up to your fork
 7. Submit a Pull request so that we can review your changes
+
+[🔝](#table-of-contents)
 
 ## License (MIT)
 
@@ -214,3 +226,5 @@ LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ```
+
+[🔝](#table-of-contents)
