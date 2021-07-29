@@ -11,6 +11,13 @@ A library of string validation for Google Apps Script.
 - If you're not sure if your input is a string, coerce it using `input + ''`
 - Passing anything other than a string will result in an error.
 
+# Table of contents
+
+- [Installation and Usage](#installation-and-usage)
+- [Validators](#validators)
+- [Contributing](#contributing)
+- [License](#license-mit)
+
 ## Installation and Usage
 
 This library is already published as an Apps Script, making it easy to include in your project. To add it to your script, do the following in the Apps Script code on the **New** editor:
@@ -164,7 +171,11 @@ Here is a list of the validators currently available.
     - If `no_symbols` is true, the validator will reject numeric strings that feature a symbol (e.g. `+`, `-`, or `.`).
     - `locale` determine the decimal separator and is one of `['ar', 'ar-AE', 'ar-BH', 'ar-DZ', 'ar-EG', 'ar-IQ', 'ar-JO', 'ar-KW', 'ar-LB', 'ar-LY', 'ar-MA', 'ar-QA', 'ar-QM', 'ar-SA', 'ar-SD', 'ar-SY', 'ar-TN', 'ar-YE', 'bg-BG', 'cs-CZ', 'da-DK', 'de-DE', 'en-AU', 'en-GB', 'en-HK', 'en-IN', 'en-NZ', 'en-US', 'en-ZA', 'en-ZM', 'es-ES', 'fr-FR', 'fr-CA', 'hu-HU', 'it-IT', 'nb-NO', 'nl-NL', 'nn-NO', 'pl-PL', 'pt-BR', 'pt-PT', 'ru-RU', 'sl-SI', 'sr-RS', 'sr-RS@latin', 'sv-SE', 'tr-TR', 'uk-UA']`.
 
-## MIT License
+## Contributing
+
+TBD
+
+## License (MIT)
 
 ```
 Copyright (c) 2018 Chris O'Hara <cohara87@gmail.com>
